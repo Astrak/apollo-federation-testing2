@@ -1,2 +1,7 @@
 include_subgraph_errors:
   all: true # Propagate errors from all subgraphs
+headers:
+  all: # we can do 'all', or 'subgraphs: xxx' to restrict
+    request:
+      - propagate:
+          named: "Authorization"
